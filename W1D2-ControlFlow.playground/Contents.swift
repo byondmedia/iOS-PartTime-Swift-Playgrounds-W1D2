@@ -21,19 +21,12 @@ print("There are \(bicycleCount) bicycles")
 
 //: We'd much rather see:
 
+
 print("There is \(bicycleCount) bicycle")
 
 //: So we need to print out different strings depending on the value of `bicycleCount`.
 //: For this we use conditional logic. Specifically `if`, `else` and sometimes `else if`. Here's an example:
 
-var someThing = 1
-var otherThing = 2
-
-if someThing == otherThing {
-    print("This bit of code should never run")
-} else {
-    print("This bit of code should run")
-}
 
 //: There are a few things going on here. Let's look at them!
 //:
@@ -47,17 +40,24 @@ if someThing == otherThing {
 //:
 //: Now see if you can make an `if`/`else` statement that prints out a grammatically correct description of how many bicycles we have. I.e. "There is 1 bicycle" or "There are 100 bicycles".
 
-bicycleCount = 1
-
-
-
+bicycleCount = 10
+var singleBike = 1
+if  bicycleCount == singleBike {
+    print("There is \(bicycleCount) bicycle")
+    
+} else{
+    print("There are \(bicycleCount) bicycles")
+}
 
 //: ### Challenge 2
 //:
 //: Now try to add an `else if` clause so it prints out "There are zero bicycles" if the `bicycleCount` is 0. `else if` goes between the `if` and the `else` blocks.
 
 bicycleCount = 0
-
+var noBikes = 0
+if bicycleCount == noBikes {
+print ("There are zero bicycles")
+    }
 
 
 
@@ -65,14 +65,15 @@ bicycleCount = 0
 //: ### Bonus Challenge
 //: Make an if/else block that prints "I think so!" if `inputString` ends in "?", if the string ends in any other character then print "You don't say!"
 //: If you can't figure out how to tell if a string ends in ?, try googling something like "swift string ends with character".
+var myQuestion: String = "is this working?"
 
-var inputString = "Do you like bicycles?"
+let questionMark: Character = "?"
 
-
-
-
-
+// let is an immutable variable, meaning that it cannot be changed.
 
 
-//: THE END
-
+if myQuestion.characters.contains(questionMark) {
+    print("I think so!")
+} else {
+    print("You don't say!")
+}
