@@ -65,15 +65,37 @@ print ("There are zero bicycles")
 //: ### Bonus Challenge
 //: Make an if/else block that prints "I think so!" if `inputString` ends in "?", if the string ends in any other character then print "You don't say!"
 //: If you can't figure out how to tell if a string ends in ?, try googling something like "swift string ends with character".
-var myQuestion: String = "is this working?"
+var myQuestion: String = "is this working"
 
 let questionMark: Character = "?"
 
 // let is an immutable variable, meaning that it cannot be changed.
 
+// Option one looking at the last charachter in a string
+
+let myLastCharacter = myQuestion.characters.last
+
+// Option Two finding the last character before the end of a string
+
+let lastLetter = myQuestion.index(before: myQuestion.endIndex)
+
+print(lastLetter)
+
+// this looks if the string contains a question mark
 
 if myQuestion.characters.contains(questionMark) {
     print("I think so!")
 } else {
     print("You don't say!")
 }
+
+// this compares if the question Mark is the same as the last letter
+
+if myLastCharacter==questionMark {
+print ("my last character is a question mark")
+}
+else {
+  print("my last character is \(myLastCharacter!)")
+}
+
+// The vriable myLast Character has to contain an Excalmation Mark to return an unwrapped option and present only the charachter needed rather than Option (character)
