@@ -95,7 +95,7 @@ if myLastCharacter==questionMark {
 print ("my last character is a question mark")
 }
 else {
-  print("my last character is \(myLastCharacter!)")
+  print("my last character is NOT\(myLastCharacter!)")
 }
 
 // The vriable myLast Character has to contain an Excalmation Mark to return an unwrapped option and present only the charachter needed rather than Option (character)
